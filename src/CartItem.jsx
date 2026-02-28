@@ -1,7 +1,12 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice';
+dispatch(updateQuantity({ name: item.name, quantity: item.quantity + 1 }));
 import './CartItem.css';
+
+const handleCheckoutShopping = (e) => {
+  alert('Functionality to be added for future reference');
+};
 
 const CartItem = ({ onContinueShopping }) => {
   const cart = useSelector(state => state.cart.items);
